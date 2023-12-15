@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+h1 {
+    margin: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the photos horizontally */
+    align-items: center; /* Center the photos vertically */
+    margin: 20px;
+}
+
+.photo {
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the color and size as needed */
+    overflow: hidden; /* Hide overflowing content, in case of shadow */
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.annotation {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.photo:hover .annotation {
+    display: block;
+}
